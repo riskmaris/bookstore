@@ -109,15 +109,15 @@ You can deploy this project using **Loading...
 
 > Mention all of the collaborators of this project.
 
-👤 **Alijan Rahimi**
+👤 **Maris Kapuka**
 
-- GitHub: [@Alijan-Rahimi](https://github.com/riskmaris)
+- GitHub: [Risk Maris](https://github.com/riskmaris)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [Insert popup windows]
+- [Create a popup window]
 
 <!-- CONTRIBUTING -->
 
@@ -125,7 +125,7 @@ You can deploy this project using **Loading...
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/rahimialijan/BookList-App-React/issues).
+Feel free to check the [issues page]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
