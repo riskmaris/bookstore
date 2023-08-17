@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family:
+    'Montserrat',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 4%;
+  background-color: #f5f6fa;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 65px;
+  background-color: white;
+  width: 100%;
+}
+
+.container {
+  padding: 4%;
+  margin-top: 50px;
+}
+
+.line {
+  width: 87.5rem;
+  height: 0.125rem;
+  margin: 5.875rem 0 2.313rem;
+  border: solid 1px #e8e8e8;
+}
