@@ -1,7 +1,8 @@
-/* eslint-disable react/prop-types */
+import React from 'react';
+import PropTypes from 'prop-types';
 import './homepage.css';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import { removeBook } from '../../redux/books/booksSlice';
 
 const CartItems = ({
   id,
@@ -63,5 +64,14 @@ const CartItems = ({
       </div>
     </div>
   );
+};
+CartItems.propTypes = {
+  id: PropTypes.string.isRequired,
+  category: PropTypes.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  progress: PropTypes.number.isRequired,
+  status: PropTypes.string.isRequired,
+  currentChapter: PropTypes.number.isRequired,
 };
 export default CartItems;
