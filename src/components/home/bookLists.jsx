@@ -3,7 +3,7 @@ const bookList = [
     id: '1',
     category: 'action',
     title: 'The Hunger Games',
-    author: 'Suzanne Collins',
+    author: 'Maris Kapuka',
     status: 'Completed',
     progress: 60,
     currentChapterr: 'Chapter 17',
