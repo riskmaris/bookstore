@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './homepage.css';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../../redux/books/booksSlice';
@@ -56,5 +57,12 @@ const CartItems = ({
       </div>
     </div>
   );
+};
+
+CartItems.propTypes = {
+  item_id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 export default CartItems;
