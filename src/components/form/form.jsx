@@ -1,20 +1,19 @@
-/* eslint-disable react/prop-types */
 import './form.css';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { addBook } from '../../redux/books/booksSlice';
 
-const Form = ({ booklength }) => {
+const Form = () => {
   const dispatch = useDispatch();
   const [book, setBook] = useState({
-    item_id: booklength + 1,
+    item_id: Date.now(),
     title: '',
     author: '',
     category: '',
   });
   const clearField = () => {
     setBook({
-      item_id: 'booklength + 1',
+      item_id: Date.now(),
       title: '',
       author: '',
       category: '',

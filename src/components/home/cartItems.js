@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../../redux/books/booksSlice';
 
 const CartItems = ({
-  item_id, title, author, category,
+  itemId, title, author, category,
 }) => {
   const dispatch = useDispatch();
   return (
@@ -23,8 +23,7 @@ const CartItems = ({
             type="button"
             className="book-action-button"
             onClick={() => {
-              console.log("Removing book with item_id:", item_id);
-              dispatch(removeBook(item_id));
+              dispatch(removeBook(itemId));
             }}
           >
             Remove
@@ -63,7 +62,7 @@ const CartItems = ({
 };
 
 CartItems.propTypes = {
-  item_id: PropTypes.number.isRequired,
+  itemId: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
