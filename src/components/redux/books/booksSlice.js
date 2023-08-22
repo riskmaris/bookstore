@@ -23,8 +23,6 @@
 // export const { removeBook, addBook } = bookSlice.actions;
 // export default bookSlice.reducer;
 
-
-
 import { createSlice } from '@reduxjs/toolkit';
 import bookList from '../../home/bookLists';
 

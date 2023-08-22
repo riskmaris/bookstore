@@ -27,7 +27,7 @@ const CartItems = ({
           <button
             type="button"
             className="book-action-button"
-            onClick={() => console.log(dispatch(removeBook(id)))}
+            onClick={() => (dispatch(removeBook(id)))}
           >
             Remove
           </button>
