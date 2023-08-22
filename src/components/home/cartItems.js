@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import './homepage.css';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import { removeBook } from '../redux/books/booksSlice.js';
 
 const CartItems = ({
   id,
