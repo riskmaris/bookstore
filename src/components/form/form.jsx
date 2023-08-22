@@ -14,7 +14,7 @@ const Form = ({ booklength }) => {
   });
   const clearField = () => {
     setBook({
-      id: booklength + 1,
+      id: 'booklength + 1',
       title: '',
       author: '',
       category: '',
@@ -24,7 +24,7 @@ const Form = ({ booklength }) => {
   const addNewBook = (e) => {
     e.preventDefault();
     if (book.title !== '') {
-      dispatch(addBook({ id: booklength + 1, ...book }));
+      dispatch(addBook(book));
       clearField();
     }
   };
