@@ -7,14 +7,14 @@ import { addBook } from '../../redux/books/booksSlice';
 const Form = ({ booklength }) => {
   const dispatch = useDispatch();
   const [book, setBook] = useState({
-    id: booklength + 1,
+    item_id: booklength + 1,
     title: '',
     author: '',
     category: '',
   });
   const clearField = () => {
     setBook({
-      id: 'booklength + 1',
+      item_id: 'booklength + 1',
       title: '',
       author: '',
       category: '',

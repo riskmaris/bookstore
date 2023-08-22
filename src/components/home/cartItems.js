@@ -22,7 +22,9 @@ const CartItems = ({
           <button
             type="button"
             className="book-action-button"
-            onClick={() => {console.log('jhkljkl', item_id); dispatch(removeBook(item_id))}}
+            onClick= {()=> {
+              dispatch(removeBook(item_id))
+            }}
           >
             Remove
           </button>
@@ -60,7 +62,7 @@ const CartItems = ({
 };
 
 CartItems.propTypes = {
-  item_id: PropTypes.string.isRequired,
+  item_id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,

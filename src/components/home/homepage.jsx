@@ -11,7 +11,7 @@ const Homepage = () => {
     <div>
       {bookList.map((item) => (
         <CartItems
-          key={item.id}
+          key={item.item_id}
           item_id={item.item_id}
           title={item.title}
           author={item.author}
