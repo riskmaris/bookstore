@@ -1,22 +1,23 @@
 const bookList = [
   {
-    id: '1',
-    category: 'action',
-    title: 'The Hunger Games',
-    author: 'Maris Kapuka',
-    status: 'Completed',
-    progress: 60,
-    currentChapterr: 'Chapter 17',
+    item_id: 'item1',
+    title: 'The Great Gatsby',
+    author: 'John Smith',
+    category: 'Fiction',
   },
   {
-    id: '2',
-    category: 'Science Fiction',
-    title: 'Dune',
-    author: 'Frank Herbert',
-    status: 'Completed',
-    progress: 8,
-    currentChapterr: 'Chapter 3: "A Lesson Learned"',
+    item_id: 'item2',
+    title: 'Anna Karenina',
+    author: 'Leo Tolstoy',
+    category: 'Fiction',
+  },
+  {
+    item_id: 'item3',
+    title: 'The Selfish Gene',
+    author: 'Richard Dawkins',
+    category: 'Nonfiction',
   },
 ];
+// Initial state:
 
 export default bookList;
