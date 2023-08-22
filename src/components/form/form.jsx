@@ -39,7 +39,7 @@ const Form = ({ booklength }) => {
 
   return (
     <div className="form-container">
-      <h2>ADD NEW BOOK</h2>
+      <h2>ADD A NEW BOOK</h2>
       <form className="submit-form" onSubmit={addNewBook}>
         <input
           required
