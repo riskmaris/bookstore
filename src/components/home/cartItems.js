@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './homepage.css';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../../redux/books/booksSlice';
+import { deleteBooks, getBookItems } from '../../redux/books/booksSlice';
 
 const CartItems = ({
   itemId, title, author, category,
@@ -22,8 +22,9 @@ const CartItems = ({
           <button
             type="button"
             className="book-action-button"
-            onClick={() => {
-              dispatch(removeBook(itemId));
+            onClick={async () => {
+              await dispatch(deleteBooks(itemId));
+              dispatch(getBookItems());
             }}
           >
             Remove
@@ -62,7 +63,7 @@ const CartItems = ({
 };
 
 CartItems.propTypes = {
-  itemId: PropTypes.number.isRequired,
+  itemId: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
