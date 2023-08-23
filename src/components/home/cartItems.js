@@ -5,17 +5,11 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../../redux/books/booksSlice';
 
 const CartItems = ({
-  id,
-  category,
-  title,
-  author,
-  progress,
-  status,
-  currentChapter,
+  itemId, title, author, category,
 }) => {
   const dispatch = useDispatch();
   return (
-    <div key={id} className="book-list-container">
+    <div className="book-list-container">
       <div className="book-info">
         <h2 className="book-category">{category}</h2>
         <h3 className="book-title">{title}</h3>
@@ -28,7 +22,9 @@ const CartItems = ({
           <button
             type="button"
             className="book-action-button"
-            onClick={() => (dispatch(removeBook(id)))}
+            onClick={() => {
+              dispatch(removeBook(itemId));
+            }}
           >
             Remove
           </button>
@@ -43,17 +39,16 @@ const CartItems = ({
           <div className="circular-progress" />
         </div>
         <div className="progress-stat">
-          <p className="percent-complete">
-            {progress}
-            %
-          </p>
-          <p className="completed">{status}</p>
+          <p className="percent-complete">70%</p>
+          <p className="completed">Completed</p>
         </div>
         <div className="vertical-line progress-line" />
         <div className="current-chapter-container">
           <div>
             <p className="current-chapter-label">CURRENT CHAPTER</p>
-            <p className="current-chapter">{currentChapter}</p>
+            <p className="current-chapter">
+              Chapter 3: &quot;A Lesson Learned&quot;
+            </p>
           </div>
           <div>
             <button className="primary-button" type="button">
@@ -65,13 +60,11 @@ const CartItems = ({
     </div>
   );
 };
+
 CartItems.propTypes = {
-  id: PropTypes.string.isRequired,
-  category: PropTypes.isRequired,
+  itemId: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  progress: PropTypes.number.isRequired,
-  status: PropTypes.string.isRequired,
-  currentChapter: PropTypes.number.isRequired,
+  category: PropTypes.string.isRequired,
 };
 export default CartItems;
