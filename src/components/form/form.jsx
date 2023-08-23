@@ -1,44 +1,33 @@
 import './form.css';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { addBook } from '../../redux/books/booksSlice';
+import { addBooks, getBookItems } from '../../redux/books/booksSlice';
 
 const Form = () => {
   const dispatch = useDispatch();
-  const [book, setBook] = useState({
-    item_id: Date.now(),
-    title: '',
-    author: '',
-    category: '',
-  });
-  const clearField = () => {
-    setBook({
-      item_id: Date.now(),
-      title: '',
-      author: '',
-      category: '',
-    });
-  };
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
-  const addNewBook = (e) => {
+  const addNewBook = async (e) => {
     e.preventDefault();
-    if (book.title !== '') {
-      dispatch(addBook(book));
-      clearField();
-    }
-  };
-
-  const handleChange = (e) => {
-    e.preventDefault();
-    setBook({
-      ...book,
-      [e.target.name]: e.target.value,
-    });
+    await dispatch(
+      addBooks({
+        id: Date.now(),
+        title,
+        author,
+        category,
+      }),
+    );
+    dispatch(getBookItems());
+    setTitle('');
+    setAuthor('');
+    setCategory('');
   };
 
   return (
     <div className="form-container">
-      <h2>ADD A NEW BOOK</h2>
+      <h2>ADD NEW BOOK</h2>
       <form className="submit-form" onSubmit={addNewBook}>
         <input
           required
@@ -46,8 +35,8 @@ const Form = () => {
           className="input input-book"
           type="text"
           placeholder="Book Title"
-          value={book.title}
-          onChange={handleChange}
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
         />
         <input
           required
@@ -55,14 +44,14 @@ const Form = () => {
           className="input input-book"
           type="text"
           placeholder="Book author"
-          value={book.author}
-          onChange={handleChange}
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
         />
         <select
           name="category"
-          value={book.category}
+          value={category}
           className="input category-input"
-          onChange={handleChange}
+          onChange={(e) => setCategory(e.target.value)}
           required
         >
           <option value="Action">Action</option>
