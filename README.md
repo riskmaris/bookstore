@@ -107,8 +107,6 @@ You can deploy this project using **Loading...
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Maris Kapuka**
 
 - GitHub: [Risk Maris](https://github.com/riskmaris)
